@@ -36,7 +36,7 @@ while True:
             window['todos'].update(values=todos)
         case "Edit":
             todo_editar = values['todos'][0]
-            novo_todo = values['todo']
+            novo_todo = values['todo'] + "\n"
 
             todos = functions.get_todos()
             index = todos.index(todo_editar)
