@@ -39,14 +39,19 @@ while True:
             functions.write_todos(todos)
             window['todos'].update(values=todos)
         case "Edit":
-            todo_editar = values['todos'][0]
-            novo_todo = values['todo'] + "\n"
+            try:
+                todo_editar = values['todos'][0]
+                novo_todo = values['todo'] + "\n"
 
-            todos = functions.get_todos()
-            index = todos.index(todo_editar)
-            todos[index] = novo_todo
-            functions.write_todos(todos)
-            window['todos'].update(values=todos)
+                todos = functions.get_todos()
+                index = todos.index(todo_editar)
+                todos[index] = novo_todo
+                functions.write_todos(todos)
+                window['todos'].update(values=todos)
+            except IndexError:
+                #print("Por favor selecione algum item primeiro para editar.")
+                sg.popup("Por favor selecione algum item primeiro para editar.", 
+                         font=('Helvetica', 15))
         case "Complete":
             todo_to_complete = values["todos"][0]
             todos = functions.get_todos()
