@@ -4,6 +4,9 @@ st.set_page_config(layout="wide")
 
 col1, col2 = st.columns(2)
 
+information = """Below you can find some of the apps I have built in Python. Feel free to contact me!
+    """
+
 with col1:
     st.image("images/photo.png", width=300)
 
@@ -20,3 +23,8 @@ specimen book. It has survived not only five centuries, but also the leap into
  versions of Lorem Ipsum
     """
     st.info(content)
+
+st.text(information)
+
+st.write(information)
+    
