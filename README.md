@@ -1,13 +1,6 @@
-# Meu Repositorio de Estudos - Git e GitHub
+# Meu Repositorio de Estudos - Python only
 
-##  1 Cria um repositorio local
- Clonar um respositório 
+##  Criando alguns Aplicativos
 
- Fazer alterações
-
- Criar uma Branch
-
- Realizar um pull
-
- Criar um Fork
+### A partir do Python
  
