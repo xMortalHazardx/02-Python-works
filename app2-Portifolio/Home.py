@@ -73,16 +73,14 @@ col3, sidebarra, col4 = st.columns(3)
 
 df = pandas.read_csv("data.csv", sep=";")
 
-with st.sidebar:
-    st.button("Home","images/1.png")
-    st.link_button("Home","http://localhost:8501")
+
     
 
 with col3:
     for i, row in df[:10].iterrows():
         st.header(row["title"])
         st.write(row["description"])
-        st.image("images/" + row["image"], width=800)
+        st.image("images/" + row["image"], width=500)
         st.write("[Source Code](https://google.com)")
         
 
@@ -90,7 +88,7 @@ with col4:
     for i, row in df[10:].iterrows():
         st.subheader(row["title"])
         st.write(row["description"])
-        st.image("images/" + row["image"], width=800)
+        st.image("images/" + row["image"], width=500)
         st.write(f"[Link]({row["url"]})")
         
 

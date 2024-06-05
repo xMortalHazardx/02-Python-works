@@ -1,4 +1,4 @@
-FILEPATH ='todos.txt'
+FILEPATH ='C:/Users/Cesar/Documents/Python Scripts/Repo.py/Python/todos.txt'
 
 def get_todos(filepath=FILEPATH):
     with open(filepath, 'r') as file_local:
