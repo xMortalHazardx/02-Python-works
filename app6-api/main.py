@@ -7,12 +7,13 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/api/v1/<station>/<date>")
-def about(station, date):
-    temperature = 23
-    return {"station": station,
-            "date": date,
-            "temperature": temperature}
+@app.route("/api/v1/<word>/<definition>")
+def about(word, definition):
+    palavra = word.upper()
+    definicao = definition.upper()
+    return {"word": palavra,
+            "definition": definicao,
+            }
 
 if __name__ =="__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
